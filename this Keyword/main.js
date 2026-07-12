@@ -54,4 +54,6 @@ callName.call(obj2, "someghing", "nothing")
 callName.apply(obj2, ["someghing", "nothing"])
 const newFnc = callName.bind(obj2, "someghing", "nothing")
 
+
+
 newFnc()

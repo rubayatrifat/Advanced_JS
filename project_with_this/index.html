@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management UI</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-[#0e0e0e] text-white font-sans flex flex-col items-center py-12 px-4 select-none">
+
+    <!-- ADD USER FORM -->
+    <form
+        style="max-width: 500px; margin: 40px auto; padding: 30px; border: 1px solid #262626; border-radius: 16px; font-family: sans-serif; background-color: #1a1a1a; color: #ffffff;">
+        <h2 style="text-align: center; margin-top: 0; margin-bottom: 24px; font-size: 24px; font-weight: bold;">Add User
+        </h2>
+
+        <div style="margin-bottom: 16px;">
+            <label for="name"
+                style="display: block; margin-bottom: 8px; font-size: 14px; font-weight: 600; color: #d1d5db;">Name</label>
+            <input type="text" id="name"
+                style="width: 100%; padding: 10px; box-sizing: border-box; background-color: #2a2a2a; border: 1px solid #333333; color: #ffffff; border-radius: 8px; outline: none;">
+        </div>
+
+        <div style="margin-bottom: 16px;">
+            <label for="role"
+                style="display: block; margin-bottom: 8px; font-size: 14px; font-weight: 600; color: #d1d5db;">Role</label>
+            <input type="text" id="role"
+                style="width: 100%; padding: 10px; box-sizing: border-box; background-color: #2a2a2a; border: 1px solid #333333; color: #ffffff; border-radius: 8px; outline: none;">
+        </div>
+
+        <div style="margin-bottom: 16px;">
+            <label for="bio"
+                style="display: block; margin-bottom: 8px; font-size: 14px; font-weight: 600; color: #d1d5db;">Bio</label>
+            <textarea id="bio" rows="3"
+                style="width: 100%; padding: 10px; box-sizing: border-box; background-color: #2a2a2a; border: 1px solid #333333; color: #ffffff; border-radius: 8px; outline: none; resize: none;"></textarea>
+        </div>
+
+        <div style="margin-bottom: 24px;">
+            <label for="photo"
+                style="display: block; margin-bottom: 8px; font-size: 14px; font-weight: 600; color: #d1d5db;">Photo
+                URL</label>
+            <input type="text" id="photo"
+                style="width: 100%; padding: 10px; box-sizing: border-box; background-color: #2a2a2a; border: 1px solid #333333; color: #ffffff; border-radius: 8px; outline: none;">
+        </div>
+
+        <button type="submit"
+            style="width: 100%; padding: 10px; background-color: transparent; border: 1px solid #333333; color: #ffffff; border-radius: 8px; font-weight: 500; cursor: pointer; transition: background 0.2s;">
+            Submit
+        </button>
+</form>
+
+    <!-- USER CARDS GRID (Dummy Users Included) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-[1100px]">
+
+        <!-- User 1: John Doe -->
+        <div
+            class="bg-[#1a1a1a] border border-[#262626] rounded-2xl p-6 flex flex-col items-center text-center shadow-lg transition-transform duration-200 hover:scale-[1.02]">
+            <!-- Avatar Circle with Gray Border -->
+            <div class="w-24 h-24 rounded-full p-[3px] border-4 border-[#3a3a3a] overflow-hidden mb-4">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=256&h=256&fit=crop"
+                    alt="John Doe" class="w-full h-full object-cover rounded-full" />
+            </div>
+            <h3 class="text-xl font-bold tracking-wide text-gray-100">John Doe</h3>
+            <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 mt-1 mb-3">Frontend Developer</p>
+            <p class="text-sm text-gray-400 leading-relaxed px-2">Loves building beautiful UIs and learning new
+                technologies.</p>
+        </div>
+
+        <!-- User 2: Jane Smith -->
+        <div
+            class="bg-[#1a1a1a] border border-[#262626] rounded-2xl p-6 flex flex-col items-center text-center shadow-lg transition-transform duration-200 hover:scale-[1.02]">
+            <div class="w-24 h-24 rounded-full p-[3px] border-4 border-[#3a3a3a] overflow-hidden mb-4">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=256&h=256&fit=crop"
+                    alt="Jane Smith" class="w-full h-full object-cover rounded-full" />
+            </div>
+            <h3 class="text-xl font-bold tracking-wide text-gray-100">Jane Smith</h3>
+            <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 mt-1 mb-3">Backend Engineer</p>
+            <p class="text-sm text-gray-400 leading-relaxed px-2">Enjoys solving complex problems and optimizing APIs.
+            </p>
+        </div>
+
+        <!-- User 3: Alex Lee -->
+        <div
+            class="bg-[#1a1a1a] border border-[#262626] rounded-2xl p-6 flex flex-col items-center text-center shadow-lg transition-transform duration-200 hover:scale-[1.02]">
+            <div class="w-24 h-24 rounded-full p-[3px] border-4 border-[#3a3a3a] overflow-hidden mb-4">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=256&h=256&fit=crop"
+                    alt="Alex Lee" class="w-full h-full object-cover rounded-full" />
+            </div>
+            <h3 class="text-xl font-bold tracking-wide text-gray-100">Alex Lee</h3>
+            <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 mt-1 mb-3">UI/UX Designer</p>
+            <p class="text-sm text-gray-400 leading-relaxed px-2">Passionate about user experience and clean design.</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
