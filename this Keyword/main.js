@@ -20,9 +20,9 @@ obj.func()
 
 
 // This in event handler
-document.querySelector("h1").addEventListener("click", () => {
-    console.log(this) // Output: the H1
-})
+// document.querySelector("h1").addEventListener("click", () => {
+//     console.log(this) // Output: the H1
+// })
 
 
 // This behaviors
@@ -36,3 +36,22 @@ document.querySelector("h1").addEventListener("click", () => {
  * event handler - element
  * class - blank obj
  */
+
+
+// Changiing default behavior of thin inside a function
+
+let obj2 = {
+    name: "Rubayat Rifat",
+    role: "System Designer"
+}
+
+function callName(para1, para2) {
+    console.log(para1 + ", " + para2)
+    console.log(this.name)
+}
+
+callName.call(obj2, "someghing", "nothing")
+callName.apply(obj2, ["someghing", "nothing"])
+const newFnc = callName.bind(obj2, "someghing", "nothing")
+
+newFnc()
